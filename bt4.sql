@@ -34,7 +34,7 @@ CREATE TABLE  elearning.Assignment
     assignment_id serial primary key,
     course_id int references  elearning.course(course_id),
     title varchar(100) NOT NULL,
-    due_date date
+    due_date date NOT NULL
 );
 CREATE TABLE  elearning.Submissions
 (
@@ -45,3 +45,4 @@ CREATE TABLE  elearning.Submissions
     grade NUMERIC(5,2) CHECK (grade >= 0 AND grade <= 100)
 
 );
+
