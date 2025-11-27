@@ -27,7 +27,7 @@ CREATE TABLE  elearning.Enrollment
     enrollment_id serial primary key,
     student_id int references elearning.student(student_id),
     course_id int references  elearning.course(course_id),
-    enroll_date date
+    enroll_date date NOT NULL
 );
 CREATE TABLE  elearning.Assignment
 (
@@ -45,4 +45,5 @@ CREATE TABLE  elearning.Submissions
     grade NUMERIC(5,2) CHECK (grade >= 0 AND grade <= 100)
 
 );
+
 
