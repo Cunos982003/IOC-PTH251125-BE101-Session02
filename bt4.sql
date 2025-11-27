@@ -41,6 +41,7 @@ CREATE TABLE  elearning.Submissions
     submission_id serial primary key,
     student_id int references elearning.student(student_id),
     assignment_id int references  elearning.assignment(assignment_id),
-    submission_date date,
+    submission_date date NOT NULL,
     grade NUMERIC(5,2) CHECK (grade >= 0 AND grade <= 100)
+
 );
